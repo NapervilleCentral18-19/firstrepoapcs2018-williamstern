@@ -1,5 +1,9 @@
 
 
+// William Stern
+// 8/28/18
+// Program 2.7
+// Converts seconds into hours and minutes and leftover seconds
 
 import java.util.Scanner;
 
@@ -14,6 +18,7 @@ public class Program2_7
 		System.out.print("Enter an ammount of seconds: ");
 		initialTime = keyboard.nextInt();
 		
+		// COnverts seconds into to hours minutes and leftover seconds
 		seconds = initialTime % 60;
 		minutes = initialTime / 60;
 		hours = minutes / 60;
