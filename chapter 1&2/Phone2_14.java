@@ -1,7 +1,7 @@
 // William Stern
 // 8/30/18
 // Phone2.14
-//Creates a random phone number
+//Creates a random phone number and formats it with dashes
 
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -18,20 +18,24 @@ public class Phone2_14
 		int num4;
 		int num5;
 		int finalNum;
-		
+		String phone;
 
-		num1 = generator.nextInt(9) - 1;
+		num1 = generator.nextInt(7) + 1; // Generates the first three numbers
 		num2 = generator.nextInt(8);
 		num3 = (int)(Math.random() * 8);
 
 		num4 = generator.nextInt(743);
 		num5 = generator.nextInt(9999);
 		
-		
-		
-		finalNum = (num1 * 100000000) + (num2 * 10000000) + (num3 * 1000000) + (num4 * 1000) + num5;
-		DecimalFormat phone = new DecimalFormat("##########");
+		phone = "" + num1 + num2 + num3 + "-" + num4 + "-" + num5;
  
-		System.out.println(phone.format(finalNum));
+		System.out.println(phone);
+		
+		/**
+		 * 624-512-2873
+		 * 636-110-3008
+
+
+		 */
 	}
 }
