@@ -28,10 +28,10 @@ public class Phone2_14
 		num5 = generator.nextInt(9999);
 		
 		
-		String numFinal = new String("" + num1 + num2 + num3 + num4 + num5);
-		finalNum = (int)numFinal;
-		DecimalFormat format = new DecimalFormat("###-###-####");
 		
-		System.out.println(format.format(numFinal));
+		finalNum = (num1 * 100000000) + (num2 * 10000000) + (num3 * 1000000) + (num4 * 1000) + num5;
+		DecimalFormat phone = new DecimalFormat("##########");
+ 
+		System.out.println(phone.format(finalNum));
 	}
 }
